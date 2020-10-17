@@ -17,7 +17,7 @@ import {NgZorroAntdModule} from 'ng-zorro-antd';
     LayoutModule,
     NgZorroAntdModule,
   ],
-  declarations: [ClientComponent,],
-  exports: []
+  declarations: [ClientComponent ],
+  exports: [ClientComponent ]
 })
 export class ClientPageModule {}

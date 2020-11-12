@@ -1,6 +1,37 @@
-<div nz-row >
-  <div nz-col >
-    <div class="banner"><img src="assets/img/banner-inicio.jpg"></div>
-  </div>
-</div>
+<nz-sider>
 
+  <div class="login">
+    <button nz-button nzType="#004D5F" [nzSize]="20" nzShape="round"><i nz-icon nzType="user" nzTheme="outline"></i>Iniciar Sesión</button>
+    <br>
+    <br>
+    <br>
+    <button nz-button nzType="#004D5F" [nzSize]="20" nzShape="round"><i nz-icon nzType="user-add" nzTheme="outline"></i>Crear Cuenta</button>
+  </div>
+</nz-sider>
+
+  <nz-layout class="layout">
+
+    <div class="titulo">
+      <h3>Conoce las mejores opciones de alojamiento en nuestra amplia oferta de hoteles, los cuales
+        además de estar bien ubicados, brindan tranquilidad y confort, incluso algunos en medio de la
+        naturaleza. En JTurismo siempre pensamos en tu comodidad, por eso contamos con hoteles en Colombia
+        acorde a tu presupuesto con habitaciones modernas y acogedoras. Disfuta esta experiencia junto a
+        nosotros.
+      </h3>
+    </div>
+    <nz-carousel nzAutoPlay nzAutoPlaySpeed="6000" [nzDotPosition]="dotPosition">
+      <div nz-carousel-content >
+          <img alt="100px" src="assets/img/hotel1.png">
+      </div>
+      <div nz-carousel-content>
+        <img alt="100px" src="assets/img/hotel2.png" >
+      </div>
+      <div nz-carousel-content >
+        <img alt="100px" src="assets/img/hotel3.png" >
+      </div>
+      <div nz-carousel-content>
+        <img alt="100px" src="assets/img/hotel4.png" >
+      </div>
+    </nz-carousel>
+
+</nz-layout>

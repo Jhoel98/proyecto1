@@ -1,14 +1,20 @@
-<nz-divider nzOrientation="center" nzText="Hoteles Disponibles"></nz-divider>
+<nz-divider nzOrientation="center" nzText="Hoteles Disponibles" style="font-size: 24px"></nz-divider>
 
-<div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
-  <div nz-col class="gutter-row" [nzSpan]="6"><div class="inner-box"></div>
+<div nz-row [nzGutter]="16">
+  <div nz-col class="gutter-row" [nzSpan]="12" *ngFor="let item of productos | paginate: { itemsPerPage: 8, currentPage: pAct }"><div class="inner-box"></div>
 
-    <nz-card nzHoverable style="width:480px" [nzCover]="coverTemplate">
-      <nz-card-meta nzTitle="Europe Street beat" nzDescription="www.instagram.com"></nz-card-meta>
+    <nz-card nzHoverable style="height: 370px"  [nzCover]="coverTemplate">
+      <nz-card-meta nzTitle="{{item.ubicacion}} | Desde {{item.precio}}" nzDescription="{{item.descripcion}}"></nz-card-meta>
     </nz-card>
     <ng-template #coverTemplate>
-      <img alt="60px" src="assets/img/prado.png"/>
+      <img src="{{item.imagen}}"/>
     </ng-template>
   </div>
-  </div>
+
+</div>
+<br>
+<pagination-controls (pageChange)="pAct = $event"></pagination-controls>
+
+
+
 

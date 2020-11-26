@@ -12,6 +12,7 @@ import {NotFoundComponent} from './components/shared/not-found/not-found.compone
 import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 registerLocaleData(localePy, 'es');
 registerLocaleData(en);
@@ -28,6 +29,7 @@ registerLocaleData(en);
     NgZorroAntdModule,
     FormsModule,
     BrowserAnimationsModule,
+    NgxPaginationModule,
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'es'},

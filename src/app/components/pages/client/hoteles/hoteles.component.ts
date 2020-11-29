@@ -10,7 +10,9 @@ import {HotelesService} from "../../../../services/hoteles.service";
 export class HotelesComponent implements OnInit {
 
   constructor(servicioHoteles:HotelesService) {
+
     this.productos=servicioHoteles.listarHoteles();
+
   }
 
   pAct: number = 1;

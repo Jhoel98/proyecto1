@@ -9,9 +9,7 @@ export class FilterPipe implements PipeTransform {
     const result = [];
     if(value != null && arg != null){
       for(const item of value){
-
         if(item.ubicacion){
-          console.log(item.ubicacion)
           if(item.ubicacion.toLowerCase().indexOf(arg.toLowerCase()) > -1){
             result.push(item)
           }

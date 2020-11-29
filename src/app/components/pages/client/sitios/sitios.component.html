@@ -1,25 +1,6 @@
 
-<nz-table #rowSelectionTable nzShowSizeChanger [nzData]="listOfData" (nzCurrentPageDataChange)="onCurrentPageDataChange($event)">
-  <thead>
-  <tr>
-    <th
-      [nzSelections]="listOfSelection"
-      [(nzChecked)]="checked"
-      [nzIndeterminate]="indeterminate"
-      (nzCheckedChange)="onAllChecked($event)"
-    ></th>
-    <th>Name</th>
-    <th>Age</th>
-    <th>Address</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let data of rowSelectionTable.data">
-    <td [nzChecked]="setOfCheckedId.has(data.id)" (nzCheckedChange)="onItemChecked(data.id, $event)"></td>
-    <td>{{ data.name }}</td>
-    <td>{{ data.age }}</td>
-    <td>{{ data.address }}</td>
-  </tr>
-  </tbody>
-</nz-table>
+<nz-divider nzOrientation="center" nzText="Sitios de Interés" style="font-size: 24px"></nz-divider>
 
+<h3>Ubica tu hotel preferido y los lugares de interés que tiene a su alrededor. Contamos con hoteles en Barranquilla, Cartagena, Medellín, Bucaramanga y Cúcuta.</h3>
+
+<div id="map"></div>

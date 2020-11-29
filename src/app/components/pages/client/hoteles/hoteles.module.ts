@@ -6,6 +6,8 @@ import { HotelesPageRoutingModule } from './hoteles-routing.module';
 import {LayoutModule} from '../../../shared/layout/layout.module';
 import {NzCardModule, NzDividerModule, NzGridModule, NzPaginationModule} from "ng-zorro-antd";
 import {NgxPaginationModule} from "ngx-pagination";
+import {FilterPipe} from "../../../../pipes/filter.pipe";
+import {HotelesService} from "../../../../services/hoteles.service";
 
 @NgModule({
   imports: [
@@ -18,8 +20,11 @@ import {NgxPaginationModule} from "ngx-pagination";
     NzGridModule,
     NzPaginationModule,
     NgxPaginationModule,
+
   ],
-  declarations: [HotelesComponent],
-  exports: []
+  declarations: [HotelesComponent,FilterPipe],
+  exports: [],
+  providers:[HotelesService]
 })
+
 export class HotelesPageModule {}

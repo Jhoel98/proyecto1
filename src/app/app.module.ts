@@ -21,6 +21,7 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     NotFoundComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -33,7 +34,9 @@ registerLocaleData(en);
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'es'},
-    { provide: NZ_I18N, useValue: en_US },
+    {provide: NZ_I18N, useValue: en_US},
+  ],
+  exports: [
   ],
   bootstrap: [AppComponent]
 })
